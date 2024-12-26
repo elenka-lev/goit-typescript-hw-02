@@ -1,0 +1,12 @@
+.items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 1200px;
+    list-style-type: none;
+
+}
+.item {
+    width: calc((100% - (15px * 2)) / 3);
+    padding: 0;
+}

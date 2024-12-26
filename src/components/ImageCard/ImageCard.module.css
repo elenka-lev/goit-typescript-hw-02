@@ -1,0 +1,10 @@
+.wrap {
+    width: 100%;
+        position: relative;
+        transition: box-shadow 0.3s ease 0s;
+        border-radius: 3px;
+        overflow: hidden;
+}
+.img {
+    object-fit: cover;
+}

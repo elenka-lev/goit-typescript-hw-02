@@ -1,0 +1,30 @@
+.header {
+    
+    background-color: hsl(258, 91%, 32%);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px #0003;
+}
+.form {
+    width: 500px;
+    height: 40px;
+}
+.btn {
+    height: 100%;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 80px;
+
+}
+.input {
+width: 388px;
+height: 100%;
+margin-right: 10px;
+border: none;
+border-radius: 7px;
+outline: none;
+padding-left: 10px;
+}
