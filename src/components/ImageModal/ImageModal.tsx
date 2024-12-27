@@ -3,7 +3,21 @@ import s from "./ImageModal.module.css"
 
 
 Modal.setAppElement('#root');
-const ImageModal = ({ isActive, onClose, image }) => {
+interface Image {
+  id: string;
+  urls: {
+    regular: string;
+    small: string;
+  };
+  alt_description: string;
+  description: string;
+}
+type ModalImg = {
+    isActive: boolean;
+    onClose(): void;
+    image: Image;
+} 
+const ImageModal = ({ isActive, onClose, image } : ModalImg) => {
         if (!image) return null;
         return (
             <Modal

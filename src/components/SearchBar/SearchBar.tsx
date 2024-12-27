@@ -2,14 +2,17 @@ import s from './SearchBar.module.css'
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
-const SearchBar = ({ onSubmit }) => {
-  const [input, setInput] = useState(''); // Локальный стейт для ввода
+type Props = {
+  onSubmit: (input: string) => void;
+}
+const SearchBar : React.FC<Props>  = ({ onSubmit  })  => {
+  const [input, setInput] = useState<string>(''); // Локальный стейт для ввода
 
-  const handleChangeInput = (evt) => {
+  const handleChangeInput = (evt : React.ChangeEvent<HTMLInputElement>) => {
     setInput(evt.target.value); // Обновляем значение поля
   };
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = (evt : React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     if (input.trim() === '') {
       toast.error('Please enter the name'); // Ошибка, если поле пустое
