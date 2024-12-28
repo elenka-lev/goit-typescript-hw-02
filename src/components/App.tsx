@@ -9,15 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import LoadMoreBtn from './LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './ImageModal/ImageModal';
 
- interface Image {
-  id: string;
-  urls: {
-    regular: string;
-    small: string;
-  };
-  alt_description: string;
-  description: string;
-}
+import { Image } from '../types';
 
 const App : React.FC =()  => {
   const [images, setImages] = useState<Image[]>([]);

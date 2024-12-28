@@ -3,15 +3,7 @@ import s from "./ImageModal.module.css"
 
 
 Modal.setAppElement('#root');
-interface Image {
-  id: string;
-  urls: {
-    regular: string;
-    small: string;
-  };
-  alt_description: string;
-  description: string;
-}
+import { Image } from '../../types';
 type ModalImg = {
     isActive: boolean;
     onClose(): void;
